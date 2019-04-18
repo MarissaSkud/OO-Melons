@@ -37,19 +37,18 @@ def make_melon_types():
 
     musk = MelonType("musk", 1998, "green", True, True, "Muskmelon")
     musk.add_pairing("mint")
-    all_melon_types.append(musk)
 
     cas = MelonType("cas", 2003, "orange", False, False, "Casaba")
-    cas.add_pairing("strawberries, mint")
-    all_melon_types.append(cas)
+    cas.add_pairing("strawberries")
+    cas.add_pairing("mint")
 
     cren = MelonType("cren", 1996, "green", False, False,"Crenshaw")
     cren.add_pairing("proscuitto")
-    all_melon_types.append(cren)
 
     yw = MelonType("yw", 2013, "yellow", False, True, "Yellow Watermelon")
-    yw.add_pairing("ice cream")
-    all_melon_types.append(yw)
+    yw.add_pairing("ice cream")   
+    
+    all_melon_types.extend([musk, cas, cren, yw])
 
     return all_melon_types
 
@@ -71,7 +70,7 @@ def make_melon_type_lookup(melon_types):
 
     return melon_dictionary
 
-print(make_melon_type_lookup(make_melon_types()))
+#print(make_melon_type_lookup(make_melon_types()))
      
 
 ############
